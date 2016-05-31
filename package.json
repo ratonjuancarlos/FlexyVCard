@@ -1,0 +1,31 @@
+{
+  "name": "flexyvcard-with-react",
+  "version": "1.0.0",
+  "description": "FlexyVcard made with React",
+  "main": "webpack.config.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ratonjuancarlos/FlexyVCard.git"
+  },
+  "author": "Pablo H",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ratonjuancarlos/FlexyVCard/issues"
+  },
+  "homepage": "https://github.com/ratonjuancarlos/FlexyVCard#readme",
+  "devDependencies": {
+    "babel-core": "^6.3.13",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "react-hot-loader": "^1.3.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
