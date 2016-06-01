@@ -26,8 +26,9 @@ var Portfolio = React.createClass({
                     {/* #portfoliolist */}
                     <div id="portfoliolist">
                     
+                        <PortfolioItem />
                     
-                          <div className="view view-first portfolio logo" data-cat="logo">
+                        <div className="view view-first portfolio logo" data-cat="logo">
                             <img src="http://placehold.it/220x165" />
                             <div className="mask">
                                 <h2>Project Name</h2>

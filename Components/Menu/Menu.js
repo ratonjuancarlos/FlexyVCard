@@ -1,5 +1,7 @@
 import React from 'react';
 
+import MenuItem from './MenuItem'
+
 var Menu = React.createClass({
   render: function() {
     return (

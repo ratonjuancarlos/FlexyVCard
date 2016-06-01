@@ -6,7 +6,7 @@ var PortfolioItem = React.createClass({
     	<div className="view view-first portfolio catWeb" data-cat="catWeb">
             <img src="http://placehold.it/220x165" />
             <div className="mask">
-                <h2>Project Name</h2>
+                <h2>Project Nameeeeee</h2>
                 <p>A wonderful serenity has taken possession of my entire soul.</p>
                 
                 <a href="http://placehold.it/600x849" rel="portfolio" className="info open-imag">

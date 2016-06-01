@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Menu from './Components/Menu'
+import Menu from './Components/Menu/Menu'
 import Widget from './Components/Widget'
 
 import Profile from './Components/Profile'
-import Resume from './Components/Resume'
-import Portfolio from './Components/Portfolio'
-import Blog from './Components/Blog'
-import Contact from './Components/Contact'
+import Resume from './Components/Resume/Resume'
+import Portfolio from './Components/Portfolio/Portfolio'
+import Blog from './Components/Blog/Blog'
+import Contact from './Components/Contact/Contact'
 
 var App = React.createClass({
    render: function(){
@@ -60,12 +60,10 @@ var App = React.createClass({
 
 	                                            <Profile />
 
-	                                            {/* 
 	                                            <Resume />
 
 	                                            <Portfolio />
 
-	                                            */} 
 	                                            <Blog />
 
 	                                            <Contact />
