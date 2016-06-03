@@ -10,9 +10,14 @@ import Portfolio from './Components/Portfolio/Portfolio'
 import Blog from './Components/Blog/Blog'
 import Contact from './Components/Contact/Contact'
 
+// import menuData from './mock-data/menu.json'
+
+
+
+
 var App = React.createClass({
    render: function(){
-      return (
+	return (
       	<div>
 	        {/*[if lt IE 7]>
 	                <p className="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>

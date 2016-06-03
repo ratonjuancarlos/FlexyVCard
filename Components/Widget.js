@@ -35,7 +35,7 @@ var Widget = React.createClass({
                         <div id="profile_info">
                             <h1 id="name" className="transition-02">brown smith</h1>
                             <h4 className="line">GRAPHIC &amp; WEB DESIGNER</h4>
-                            <h6><span className="fa fa-map-marker"></span> San Francisco , CA</h6>
+                            <h6><span className="fa fa-map-marker"></span> San Francisco , CAca</h6>
                         </div>
                         {/* End Profile info */}  
 

@@ -7,11 +7,13 @@ var ExperienceGroup = React.createClass({
   render: function() {
     return (
     	<div>
-		  	<ExperienceTitle />
+		  	<ExperienceTitle title={this.props.title}/>
 		  	<ul className="attributes">
-	            <ExperienceItem />
-
-	            <ExperienceItem />
+		  		{
+                    this.props.experience.map(function(job, index) {
+                        return <ExperienceItem index={index} {...job} />
+                    })
+                }
 	        </ul>
 	        <br />
 		</div>
