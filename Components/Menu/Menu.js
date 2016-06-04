@@ -56,8 +56,8 @@ var Menu = React.createClass({
     return (
     	<ul className="resp-tabs-list">
 	        {
-              this.state.menuData.map(function(itemMenu) {
-                return <MenuItem {...itemMenu} />
+              this.state.menuData.map(function(itemMenu, index) {
+                return <MenuItem key={'menu_'+index} {...itemMenu} />
               })
             }
 

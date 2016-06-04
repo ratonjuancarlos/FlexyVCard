@@ -181,8 +181,8 @@ var Resume = React.createClass({
                     <div className="col-md-6">
 
                         {
-                            this.state.resumeData.map(function(itemResume) {
-                                return <SkillbarGroup {...itemResume} />
+                            this.state.resumeData.map(function(itemResume, index) {
+                                return <SkillbarGroup key={'SkillbarGroup_'+index} {...itemResume} />
                             })
                         }
 
@@ -208,8 +208,8 @@ var Resume = React.createClass({
                     <div className="col-md-6 resume-left">    
 
                         {
-                            this.state.experienceData.map(function(itemExperience) {
-                                return <ExperienceGroup {...itemExperience} />
+                            this.state.experienceData.map(function(itemExperience, index) {
+                                return <ExperienceGroup key={'ExperienceGroup_'+index} {...itemExperience} />
                             })
                         }
 
@@ -236,8 +236,8 @@ var Resume = React.createClass({
 
                             <ul>
                                 {
-                                    this.state.referenceData.map(function(itemReference) {
-                                        return <ClientReferenceItem {...itemReference} />
+                                    this.state.referenceData.map(function(itemReference, index) {
+                                        return <ClientReferenceItem key={'ClientReferenceItem_'+index} {...itemReference} />
                                     })
                                 }
                                 

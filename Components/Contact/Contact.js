@@ -26,10 +26,10 @@ var Contact = React.createClass({
                                     </div>
 
                                     <ul>
-                                        <li><span className="span-info"><i className="glyphicon glyphicon-map-marker"></i> Adress:</span> San Francisco , CA.<br /><br /></li>
-                                        <li><span className="span-info"><i className="glyphicon glyphicon-envelope"></i> Email:</span> brown.smith@gmail.com</li>
-                                        <li><span className="span-info"><i className="glyphicon glyphicon-phone"></i> Phone:</span> +123 456 789 111</li>
-                                        <li><span className="span-info"><i className="glyphicon glyphicon-globe"></i> Website:</span> www.brown-smith.com</li>
+                                        <li><span className="span-info"><i className="glyphicon glyphicon-map-marker"></i> Adress:</span> {this.props.profileData.city}<br /><br /></li>
+                                        <li><span className="span-info"><i className="glyphicon glyphicon-envelope"></i> Email:</span> {this.props.profileData.email}</li>
+                                        <li><span className="span-info"><i className="glyphicon glyphicon-phone"></i> Phone:</span> {this.props.profileData.phone}</li>
+                                        <li><span className="span-info"><i className="glyphicon glyphicon-globe"></i> Website:</span> {this.props.profileData.website}</li>
                                         <li><span className="span-info"><i className="glyphicon glyphicon-comment"></i> Skype:</span> brown-smith-skype</li>
                                         <li><span className="span-info"><i className="glyphicon glyphicon-thumbs-up"></i> G. Drive:</span> brown-s-gm@gmail.com</li>
                                         <li><span className="span-info"><i className="glyphicon glyphicon-unchecked"></i> Skydrive:</span> brown-s-sk@hotmail.com</li>

@@ -33,9 +33,9 @@ var Widget = React.createClass({
 
                         {/* Profile info */}
                         <div id="profile_info">
-                            <h1 id="name" className="transition-02">brown smith</h1>
-                            <h4 className="line">GRAPHIC &amp; WEB DESIGNER</h4>
-                            <h6><span className="fa fa-map-marker"></span> San Francisco , CAca</h6>
+                            <h1 id="name" className="transition-02">{this.props.profileData.name}</h1>
+                            <h4 className="line">{this.props.profileData.job}</h4>
+                            <h6><span className="fa fa-map-marker"></span> {this.props.profileData.address}</h6>
                         </div>
                         {/* End Profile info */}  
 
@@ -43,10 +43,10 @@ var Widget = React.createClass({
                         {/* Profile Description */}
                         <div id="profile_desc">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac risus nibh. Donec adipiscing luctus tur
+                                {this.props.profileData.quote1}
                             </p>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing eli
+                                {this.props.profileData.quote2} 
                             </p>
                         </div>
                         {/* End Profile Description */}  

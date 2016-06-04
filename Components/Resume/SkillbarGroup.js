@@ -22,8 +22,8 @@ var SkillbarGroup = React.createClass({
 
 			<div className="skills">
 				{
-                    this.props.skills.map(function(skill) {
-                        return <Skillbar {...skill} />
+                    this.props.skills.map(function(skill, index) {
+                        return <Skillbar key={'Skillbar_'+index} {...skill} />
                     })
                 }
 			</div>
