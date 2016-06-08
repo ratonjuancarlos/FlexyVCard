@@ -1,11 +1,24 @@
 import React from 'react';
 
 var BlogAuthor = React.createClass({
+    getInitialState: function () {
+        return {
+                blogAuthorData : {
+                  "id": {
+                    "$oid": "57584c79fc13ae7ff3000674"
+                  },
+                  "name": "Andrea Oliver",
+                  "image": "http://dummyimage.com/100x100.png/cc0000/ffffff",
+                  "resume": "Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
+                  "postCreated": 12
+                }
+        }
+    },
   render: function() {
     return (
         <div className="about_author">
             <div className="title_content" style={{marginBottom:'10px'}}>
-                <div className="text_content">BILL GATES</div>
+                <div className="text_content">{this.state.blogAuthorData.name}</div>
                 <div className="clear"></div>
             </div>
 
@@ -13,17 +26,12 @@ var BlogAuthor = React.createClass({
 
 
             <div className="prg_content">
-                <img src="http://placehold.it/100x100" width="100" height="100" alt="img" />
+                <img src={this.state.blogAuthorData.image} width="100" height="100" alt="img" />
 
-                <div className="text">
-                    Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit. Praesent condimentum sed elit
-                    vitae tristique. Aliquam erat volutpat. Nunc sit
-                    amet cursus libero. In fringilla egestas ornare.
-                </div>
+                <div className="text">{this.state.blogAuthorData.resume}</div>
 
                 <div className="nb_post" style={{marginTop: '10px'}}>
-                    <b id="nb_post"> 15 posts</b> created by author
+                    <b id="nb_post"> {this.state.blogAuthorData.postCreated} posts</b> created by author
                 </div>
             </div>
 
