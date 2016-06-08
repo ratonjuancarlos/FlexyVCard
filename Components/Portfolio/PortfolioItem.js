@@ -3,16 +3,16 @@ import React from 'react';
 var PortfolioItem = React.createClass({
   render: function() {
     return (
-    	<div className="view view-first portfolio catWeb" data-cat="catWeb">
+    	<div className={"view view-first portfolio " + this.props.cat} data-cat="catWeb">
             <img src="http://placehold.it/220x165" />
             <div className="mask">
-                <h2>Project Nameeeeee</h2>
-                <p>A wonderful serenity has taken possession of my entire soul.</p>
+                <h2>{this.props.name}</h2>
+                <p>{this.props.description}</p>
                 
-                <a href="http://placehold.it/600x849" rel="portfolio" className="info open-imag">
+                <a href={this.props.image} rel="portfolio" className="info open-imag">
                     <i className="fa fa-search"></i>
                 </a>
-                <a href="http://www.youtube.com/watch?v=c9MnSeYYtYY" rel="portfolio" className="info external"><i className="fa fa-play"></i></a> 
+                {this.props.content} 
             </div>
         </div>
     );
