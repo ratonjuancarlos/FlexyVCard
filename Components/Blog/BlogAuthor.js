@@ -4,9 +4,7 @@ var BlogAuthor = React.createClass({
     getInitialState: function () {
         return {
                 blogAuthorData : {
-                  "id": {
-                    "$oid": "57584c79fc13ae7ff3000674"
-                  },
+                  "id": 1,
                   "name": "Andrea Oliver",
                   "image": "http://dummyimage.com/100x100.png/cc0000/ffffff",
                   "resume": "Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",

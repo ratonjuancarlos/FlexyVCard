@@ -5,7 +5,8 @@ import MenuItem from './MenuItem'
 var Menu = React.createClass({
 	getInitialState: function () {
 	    return {
-	    		menuData : [
+	    	menuData :
+	    	[
 			    {
 				    "class": "tabs-profile",
 				    "tabName": "profile",

@@ -12,7 +12,7 @@ var ProfileServiceAccordion = React.createClass({
                     </a>
                 </h4>
             </div>
-            <div id={'collapse'+this.props.index} className="panel-collapse collapse in">
+            <div id={'collapse '+this.props.index} className="panel-collapse collapse in">
                 <div className="panel-body">
                     <i className="fa fa-quote-left"></i>  {this.props.description}
             	</div>
