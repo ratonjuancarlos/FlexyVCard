@@ -8,11 +8,11 @@ var ProfileServiceAccordion = React.createClass({
                 <h4 className="panel-title">
                     <a data-toggle="collapse" data-parent="#accordion" href={'#collapse'+this.props.index} className="collapse_tabs">
                         {this.props.name}
-                        <i className="glyphicon glyphicon-chevron-up" style={{float:'right', fontSize:13+'px' }} ></i>
+                        <i className={"glyphicon glyphicon-chevron-" +(this.props.index == 0 ? "up" : "down") } style={{float:'right', fontSize:13+'px' }} ></i>
                     </a>
                 </h4>
             </div>
-            <div id={'collapse '+this.props.index} className="panel-collapse collapse in">
+            <div id={'collapse'+this.props.index} className={"panel-collapse collapse " +(this.props.index == 0 ? "in" : "collapse") } >
                 <div className="panel-body">
                     <i className="fa fa-quote-left"></i>  {this.props.description}
             	</div>

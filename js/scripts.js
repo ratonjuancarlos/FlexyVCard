@@ -18,15 +18,15 @@ jQuery(document).ready(function($) {
 	/* ------------------------------- Taps profile ------------------------- */
 	/* ---------------------------------------------------------------------- */
 	
-	$('.collapse_tabs').click(function() {
+	// $('.collapse_tabs').click(function() {
 	
-		if ($(this).hasClass('collapsed')) {
-			$(this).find('i.glyphicon').removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
-		} else {
-			$(this).find('i.glyphicon').removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
-		}
+	// 	if ($(this).hasClass('collapsed')) {
+	// 		$(this).find('i.glyphicon').removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
+	// 	} else {
+	// 		$(this).find('i.glyphicon').removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
+	// 	}
 	
-	});
+	// });
 	
 	/* ---------------------------------------------------------------------- */
 	/* -------------------------- easyResponsiveTabs ------------------------ */
@@ -302,6 +302,7 @@ jQuery(document).ready(function($) {
 	
 	var map;
     function initialize() {
+    	console.log("en initialize de maps");
         map = new GMaps({
             div: '#map',
             lat: -34.637259, 

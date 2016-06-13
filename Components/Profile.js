@@ -4,6 +4,17 @@ import ProfileServiceColumn from './Profile/ProfileServiceColumn'
 import ProfileServiceAccordion from './Profile/ProfileServiceAccordion'
 
 var Profile = React.createClass({
+    componentDidMount: function() {
+        $('.collapse_tabs').click(function() {
+
+            if ($(this).hasClass('collapsed')) {
+                $(this).find('i.glyphicon').removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
+            } else {
+                $(this).find('i.glyphicon').removeClass("glyphicon-chevron-up").addClass("glyphicon-chevron-down");
+            }
+
+        });
+    },
 
   render: function() {
     return (

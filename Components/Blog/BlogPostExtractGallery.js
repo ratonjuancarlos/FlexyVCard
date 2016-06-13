@@ -1,9 +1,11 @@
 import React from 'react';
 
+import BlogPostGalleryImage from './BlogPostGalleryImage';
+
 var BlogPostExtractGallery = React.createClass({
   render: function() {
     return (
-    	<article id="post-1" className="blog-article">                    
+    	<article id={this.props.anchor} className="blog-article">                    
 
             <div className="col-md-12">
 
@@ -18,37 +20,21 @@ var BlogPostExtractGallery = React.createClass({
                                 <div id="carousel-1" className="carousel slide" data-ride="carousel">
 
                                     <ol className="carousel-indicators">
-                                        <li data-target="#carousel-1" data-slide-to="0" className="active"></li>
-                                        <li data-target="#carousel-1" data-slide-to="1"></li>
-                                        <li data-target="#carousel-1" data-slide-to="2"></li>
+                                        {
+                                          this.props.carrousell.map(function(image, index) {
+                                            return <li data-target="#carousel-2" data-slide-to={index} className={index==0 ? "active" : ""}></li>
+                                          })
+                                        }
                                     </ol>
 
                                     <div className="carousel-inner">
 
-                                        <div className="item active">
-                                            <img src="http://placehold.it/825x340" alt="" />
-                                            <div className="carousel-caption">
-                                                <h4>First Thumbnail label</h4>
-                                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                            </div>
-                                        </div>
-
-
-                                        <div className="item">
-                                            <img src="http://placehold.it/825x340" alt="" />
-                                            <div className="carousel-caption">
-                                                <h4>First Thumbnail label</h4>
-                                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                            </div>
-                                        </div>
-
-                                        <div className="item">
-                                            <img src="http://placehold.it/825x340" alt="" />
-                                            <div className="carousel-caption">
-                                                <h4>First Thumbnail label</h4>
-                                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                            </div>
-                                        </div>
+                                        {
+                                          this.props.carrousell.map(function(image, index) {
+                                            image.index = index;
+                                            return <BlogPostGalleryImage {...image} />
+                                          })
+                                        }
 
                                     </div>
 
@@ -73,23 +59,23 @@ var BlogPostExtractGallery = React.createClass({
                             <div className="top_c ">
 
                                 <div className="title_content">
-                                    <div className="text_content"><a href="#post-1" className="read_more">Blog Post Gallery</a></div>
+                                    <div className="text_content"><a href={this.props.url} className="read_more">{this.props.title}</a></div>
                                     <div className="clear"></div>
                                 </div>
 
                                 <ul className="info">
-                                    <li><i className="glyphicon glyphicon-comment"></i> 2 Comments</li>
-                                    <li><i className="glyphicon glyphicon-time"></i> January 31, 2014</li>
-                                    <li><i className="glyphicon glyphicon-user"></i> by Jane Doe</li>
-                                    <li><i className="glyphicon glyphicon-tag"></i> jquery, slider, web design</li>
+                                    <li><i className="glyphicon glyphicon-comment"></i> {this.props.commentsNumber} Comments</li>
+                                    <li><i className="glyphicon glyphicon-time"></i> {this.props.date}</li>
+                                    <li><i className="glyphicon glyphicon-user"></i> by {this.props.author}</li>
+                                    <li><i className="glyphicon glyphicon-tag"></i> {this.props.tagList}</li>
                                 </ul>
 
                                 <div className="blog-content">
-                                    <p><i className="fa fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo...</p></div>
+                                    <p><i className="fa fa-quote-left"></i> {this.props.caps}</p></div>
                             </div>
                         </div>	
 
-                        <a href="#post-1" className="read_m pull-right">Read More <i class='glyphicon glyphicon-chevron-right'></i></a>
+                        <a href={this.props.url} className="read_m pull-right">Read More <i class='glyphicon glyphicon-chevron-right'></i></a>
 
                     </div>
                 </div>

@@ -17,7 +17,7 @@ var BlogPostExtractImage = React.createClass({
 
                         <div className="media">
                             <div className="he-wrap tpl2">
-                                <img src="http://placehold.it/825x340" className="img-hover" alt="" />
+                                <img src={this.props.image} className="img-hover" alt="" />
                             </div>
 
                         </div>
@@ -30,23 +30,23 @@ var BlogPostExtractImage = React.createClass({
                             <div className="top_c ">
 
                                 <div className="title_content">
-                                    <div className="text_content"><a href="#post-3" className="read_more">Blog Post Image</a></div>
+                                    <div className="text_content"><a href={this.props.url} className="read_more">{this.props.title}</a></div>
                                     <div className="clear"></div>
                                 </div>
 
                                 <ul className="info">
-                                    <li><i className="glyphicon glyphicon-comment"></i> 2 Comments</li>
-                                    <li><i className="glyphicon glyphicon-time"></i> January 31, 2014</li>
-                                    <li><i className="glyphicon glyphicon-user"></i> by Jane Doe</li>
-                                    <li><i className="glyphicon glyphicon-tag"></i> php, web design</li>
+                                    <li><i className="glyphicon glyphicon-comment"></i> {this.props.commentsNumber} Comments</li>
+                                    <li><i className="glyphicon glyphicon-time"></i> {this.props.date}</li>
+                                    <li><i className="glyphicon glyphicon-user"></i> by {this.props.author}</li>
+                                    <li><i className="glyphicon glyphicon-tag"></i> {this.props.tagList}</li>
                                 </ul>
 
                                 <div className="blog-content">
-                                    <p><i className="fa fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo...</p></div>
+                                    <p><i className="fa fa-quote-left"></i> {this.props.caps}...</p></div>
                             </div>
                         </div>	
 
-                        <a href="#post-3" className="read_m pull-right">Read More <i class='glyphicon glyphicon-chevron-right'></i></a>
+                        <a href={this.props.url} className="read_m pull-right">Read More <i class='glyphicon glyphicon-chevron-right'></i></a>
 
                     </div>
                 </div>

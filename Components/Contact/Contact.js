@@ -1,6 +1,27 @@
 import React from 'react';
 
 var Contact = React.createClass({
+  componentDidMount: function() {
+        var map;
+        function initialize() {
+            map = new GMaps({
+                div: '#map',
+                lat: -34.637259, 
+                lng: -58.374119,
+                zoom: 16
+        
+            });
+            map.addMarker({
+                lat: -34.637259,
+                lng: -58.374119,
+                title: 'Marker with InfoWindow',
+                icon: 'images/map-marker.png',
+                infoWindow: {
+                    content: '<p>Barracas</p>'
+                }
+            });
+        }
+  },
   render: function() {
     return (
             <div id="contact" className="content_2">
