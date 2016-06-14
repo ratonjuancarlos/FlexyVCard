@@ -4,9 +4,13 @@ import BlogPostExtractGallery from './BlogPostExtractGallery';
 import BlogPostExtractAside from './BlogPostExtractAside';
 import BlogPostExtractImage from './BlogPostExtractImage';
 
+import BlogExtractPostTemplate from './BlogExtractPostTemplate';
+
 import BlogPostGallery from './BlogPostGallery';
 import BlogPostAside from './BlogPostAside';
 import BlogPostImage from './BlogPostImage';
+
+import BlogPostTemplate from './BlogPostTemplate';
 
 var Blog = React.createClass({
     getInitialState: function () {
@@ -176,54 +180,25 @@ var Blog = React.createClass({
     return (
             <div id="blog" className="content_2">
                 <h1 className="h-bloc">Blog - My Blog</h1><br /> 
-
                 <div className="col-md-12">
                     <div className="row">
-
-                        {/* Page Blog */}
                         <div className="col-md-12" id="blog_page">
-                            {/* start Page Blog */}
                             <section id="blog-page">
-
                             {
-
                               this.state.blogData.map(function(blogItem, index, blogData) {
                                 blogItem.tagList = concaTag(blogItem.tags);
-                                switch(blogItem.type) {
-                                    case "Gallery":
-                                        return <BlogPostExtractGallery {...blogItem}/>
-                                        break;
-                                    case "Image":
-                                        return <BlogPostExtractImage {...blogItem}/>
-                                        break;
-                                    default:
-                                        return <BlogPostExtractAside {...blogItem}/>
-                                }
+                                return <BlogExtractPostTemplate {...blogItem}/>
                               })
                             }
-
                             </section>
 
-
                             {
                               this.state.blogData.map(function(blogItem, index, blogData) {
                                 blogItem.tagList = concaTag(blogItem.tags);
-                                switch(blogItem.type) {
-                                    case "Gallery":
-                                        return <BlogPostGallery {...blogItem}/>
-                                        break;
-                                    case "Image":
-                                        return <BlogPostImage {...blogItem}/>
-                                        break;
-                                    default:
-                                        return <BlogPostAside {...blogItem}/>
-                                }
+                                return <BlogPostTemplate {...blogItem}/>
                               })
                             }
-                            {/* End Page Blog */}
-
                         </div>
-
 
                         <div className="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                             <div className="modal-dialog modal-sm">

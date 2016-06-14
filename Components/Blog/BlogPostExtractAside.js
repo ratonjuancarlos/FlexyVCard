@@ -36,7 +36,8 @@ var BlogPostExtractAside = React.createClass({
                                 </ul>
 
                                 <div className="blog-content">
-                                    <p><i className="fa fa-quote-left"></i> {this.props.caps}</p></div>
+                                    <p><i className="fa fa-quote-left"></i> {this.props.caps}</p>
+                                </div>
                             </div>
                         </div>	
 
