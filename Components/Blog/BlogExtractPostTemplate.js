@@ -1,22 +1,25 @@
 import React from 'react';
 
-import BlogPostGalleryImage from './BlogPostGalleryImage';
+import BlogPostGalleryImage from './layout/BlogPostGalleryImage';
+import BlogPostInfo from './BlogPostInfo';
+
+import BlogPostLayoutExtractAside from './layout/extract/BlogPostLayoutExtractAside.js';
+import BlogPostLayoutExtractGallery from './layout/extract/BlogPostLayoutExtractGallery.js';
+import BlogPostLayoutExtractImage from './layout/extract/BlogPostLayoutExtractImage.js';
 
 var BlogExtractPostTemplate = React.createClass({
   render: function() {
     return (
-    	<article id="post-1" className="blog-article">
+    	<article id={this.props.anchor} className="blog-article">
     		<div className="col-md-12">
 	    		<div className="row">
-					{
-						      {
-						        switch (this.props.type) {
-						          case "Gallery":   return "#FF0000";
-						          case "Image": return "#00FF00";
-						          default:      return "#FFFFFF";
-						        }
-						      }
-					}
+					{(() => {
+				        switch (this.props.type) {
+				          case "Gallery": 	return <BlogPostLayoutExtractGallery {...this.props} />  
+				          case "Image": 	return <BlogPostLayoutExtractImage {...this.props} />	
+						  default:      	return <BlogPostLayoutExtractAside {...this.props} />	
+				        }
+				      })()}
 				</div>
 				<div className="row">
 	                <div className="col-md-12 post_content">
@@ -26,12 +29,9 @@ var BlogExtractPostTemplate = React.createClass({
                                     <div className="text_content"><a href={this.props.url} className="read_more">{this.props.title}</a></div>
                                     <div className="clear"></div>
                                 </div>
-	                            <ul className="info-post">
-                                    <li><i className="glyphicon glyphicon-comment"></i> {this.props.commentsNumber} Comments</li>
-                                    <li><i className="glyphicon glyphicon-time"></i> {this.props.date}</li>
-                                    <li><i className="glyphicon glyphicon-user"></i> by {this.props.author}</li>
-                                    <li><i className="glyphicon glyphicon-tag"></i> {this.props.tagList}</li>
-                                </ul>
+
+	                            <BlogPostInfo {...this.props} />
+
 	                            <div className="blog-content">
                                     <p><i className="fa fa-quote-left"></i> {this.props.caps}</p>
                                 </div>

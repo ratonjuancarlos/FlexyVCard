@@ -1,22 +1,35 @@
 import React from 'react';
 
-import BlogComments from './BlogComments';
+import BlogComments from './comments/BlogComments';
 import BlogAuthor from './BlogAuthor';
+import BlogPostInfo from './BlogPostInfo';
+
+import BlogPostLayoutAside from './layout/BlogPostLayoutAside.js';
+import BlogPostLayoutGallery from './layout/BlogPostLayoutGallery.js';
+import BlogPostLayoutImage from './layout/BlogPostLayoutImage.js';
+
+
 
 var BlogPostTemplate = React.createClass({
   render: function() {
     return (
-    	<section id="post-2-page" className="content-post" style={{display: 'none'}}>
+    	<section id={this.props.anchor+'-page'} className="content-post" style={{display: 'none'}}>
             <div className="row inner">
                 <div className="col-md-12" style={{width: '100%', WebkitBoxSizing: 'border-box', boxSizing: 'border-box', float: 'left', background: 'rgba(255, 255, 255, 0.8)', paddingBottom: '15px', paddingTop: '15px'}}>
                     <article className="postPage">
 
+	                    {(() => {
+					        switch (this.props.type) {
+					          case "Gallery": 	return <BlogPostLayoutGallery {...this.props} />  
+					          case "Image": 	return <BlogPostLayoutImage {...this.props} />	
+							  default:      	return <BlogPostLayoutAside {...this.props} />	
+					        }
+					     })()}
 
                         <div className="title_content">
                             <div className="text_content">{this.props.title}</div>
                             <div className="clear"></div>
                         </div>
-
 
                         <p className="caps">{this.props.caps}</p>
 
@@ -32,12 +45,8 @@ var BlogPostTemplate = React.createClass({
                                 }
                                 </div>
 
-                                <ul className="info-post">
-                                    <li><i className="glyphicon glyphicon-comment"></i> {this.props.commentsNumber} Comments</li>
-                                    <li><i className="glyphicon glyphicon-time"></i> {this.props.date}</li>
-                                    <li><i className="glyphicon glyphicon-user"></i> by {this.props.author}</li>
-                                    <li><i className="glyphicon glyphicon-tag"></i> {this.props.tagList}</li>
-                                </ul>
+                                <BlogPostInfo {...this.props} />
+
                             </div>
 
                             <div className="clear"></div>      
@@ -48,8 +57,6 @@ var BlogPostTemplate = React.createClass({
                             <div className="clear"></div>      
 
                             <BlogComments />
-
-
 
                             <div className="col-md-12"  style={{marginTop: '20px'}}>
                                 <a href={this.props.prev} className="readmore" id="pagination"><i className="glyphicon glyphicon-chevron-right"></i></a>

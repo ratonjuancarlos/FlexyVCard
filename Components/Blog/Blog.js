@@ -1,15 +1,6 @@
 import React from 'react';
 
-import BlogPostExtractGallery from './BlogPostExtractGallery';
-import BlogPostExtractAside from './BlogPostExtractAside';
-import BlogPostExtractImage from './BlogPostExtractImage';
-
 import BlogExtractPostTemplate from './BlogExtractPostTemplate';
-
-import BlogPostGallery from './BlogPostGallery';
-import BlogPostAside from './BlogPostAside';
-import BlogPostImage from './BlogPostImage';
-
 import BlogPostTemplate from './BlogPostTemplate';
 
 var Blog = React.createClass({
