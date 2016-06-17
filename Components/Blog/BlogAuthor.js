@@ -2,15 +2,18 @@ import React from 'react';
 
 var BlogAuthor = React.createClass({
     getInitialState: function () {
-        return {
-                blogAuthorData : {
-                  "id": 1,
-                  "name": "Andrea Oliver",
-                  "image": "http://dummyimage.com/100x100.png/cc0000/ffffff",
-                  "resume": "Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
-                  "postCreated": 12
-                }
-        }
+      return {
+              blogAuthorData : {}
+      }
+    },
+    componentWillMount: function() {
+      fetch('Components/Blog/mock-data/blogAuthor.json')
+        .then((res) => res.json())
+        .then((dataJSON) => {
+          this.setState({
+            blogAuthorData: dataJSON
+          });
+        });
     },
   render: function() {
     return (

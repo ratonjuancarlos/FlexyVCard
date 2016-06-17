@@ -1,0 +1,38 @@
+[{
+    "class": "tabs-profile",
+    "tabName": "profile",
+    "title": "Profile",
+    "faIcon": "fa-user",
+    "active": true,
+    "style": {}
+}, {
+    "class": "tabs-resume",
+    "tabName": "resume",
+    "title": "Resume",
+    "faIcon": "fa-tasks",
+    "active": false,
+    "style": {}
+}, {
+    "class": "tabs-portfolio",
+    "tabName": "portfolio",
+    "title": "Portfolio",
+    "faIcon": "fa-briefcase",
+    "active": false,
+    "style": {}
+}, {
+    "class": "tabs-blog",
+    "tabName": "blog",
+    "title": "Blog",
+    "faIcon": "fa-bullhorn",
+    "active": false,
+    "style": {}
+}, {
+    "class": "tabs-contact",
+    "tabName": "contact",
+    "title": "Contact",
+    "faIcon": "fa-envelope",
+    "active": false,
+    "style": {
+        "marginBottom": "48px !important"
+    }
+}]
