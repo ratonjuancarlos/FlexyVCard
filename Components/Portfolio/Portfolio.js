@@ -5,21 +5,8 @@ import PortfolioItem from './PortfolioItem';
 var Portfolio = React.createClass({
     getInitialState: function () {
         return {
-                portfolioData :  {
-                     "id": 1,
-                     "categories": [],
-                     "projects": []
-                }
+                portfolioData :  require("./mock-data/portfolio.js")
         }
-    },
-    componentWillMount: function() {
-      fetch('Components/Portfolio/mock-data/portfolio.json')
-        .then((res) => res.json())
-        .then((dataJSON) => {
-          this.setState({
-            portfolioData: dataJSON
-          });
-        });
     },
     render: function() {
       function getAllCat(cats){

@@ -10,10 +10,6 @@ import Portfolio from './Components/Portfolio/Portfolio'
 import Blog from './Components/Blog/Blog'
 import Contact from './Components/Contact/Contact'
 
-// import menuData from './mock-data/menu.json'
-
-
-
 
 var App = React.createClass({
 	getInitialState: function () {
@@ -24,13 +20,9 @@ var App = React.createClass({
         }
     },
     componentWillMount: function() {
-        fetch('mock-data/profile.json')
-            .then((res) => res.json())
-            .then((dataJSON) => {
-                this.setState({
-                    profileData: dataJSON
-                });
-            });
+    	this.setState({
+            profileData: require("./mock-data/profile.js")
+        });
     },
 
    render: function(){
