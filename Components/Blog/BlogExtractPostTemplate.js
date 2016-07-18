@@ -37,7 +37,7 @@ var BlogExtractPostTemplate = React.createClass({
                                 </div>
 	                        </div>
 	                    </div>
-	                    <a href={this.props.url} className="read_m pull-right">Read More <i class='glyphicon glyphicon-chevron-right'></i></a>
+	                    <a href={this.props.url} className="read_m pull-right">Read More <i className='glyphicon glyphicon-chevron-right'></i></a>
 	                </div>
 	            </div>
     		</div>

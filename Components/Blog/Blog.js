@@ -38,7 +38,7 @@ var Blog = React.createClass({
                             {
                               this.state.blogData.map(function(blogItem, index, blogData) {
                                 blogItem.tagList = concaTag(blogItem.tags);
-                                return <BlogExtractPostTemplate {...blogItem}/>
+                                return <BlogExtractPostTemplate key={'BlogExtractPostTemplate_'+index} {...blogItem}/>
                               })
                             }
                             </section>
@@ -46,7 +46,7 @@ var Blog = React.createClass({
                             {
                               this.state.blogData.map(function(blogItem, index, blogData) {
                                 blogItem.tagList = concaTag(blogItem.tags);
-                                return <BlogPostTemplate {...blogItem}/>
+                                return <BlogPostTemplate key={'BlogPostTemplate_'+index} {...blogItem}/>
                               })
                             }
                         </div>

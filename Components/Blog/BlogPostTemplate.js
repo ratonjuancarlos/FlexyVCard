@@ -40,7 +40,7 @@ var BlogPostTemplate = React.createClass({
                                 <div>
                                 {
                                   this.props.tags.map(function(tag, index) {
-                                    return <span className="tag">{'#'+tag.tag}</span>
+                                    return <span  key={'BlogPostTemplateLi_'+index}  className="tag">{'#'+tag.tag}</span>
                                   })
                                 }
                                 </div>

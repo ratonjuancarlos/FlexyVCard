@@ -97,7 +97,7 @@ var Profile = React.createClass({
                     <div className="cycle-slideshow">
                         {
                           this.props.profileData.service.map(function(serviceItem, index) {
-                            return <img key={'serviceImage_'+index}src={serviceItem.image} />
+                            return <img key={'serviceImage_'+index} src={serviceItem.image} />
                           })
                         }
                     </div>
