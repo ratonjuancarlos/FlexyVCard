@@ -18,7 +18,7 @@ var BlogPostLayoutGallery = React.createClass({
                         <ol className="carousel-indicators">
                             {
                               this.props.carrousell.map(function(image, index) {
-                                return <li data-target="#carousel-2" data-slide-to={'BlogPostLayoutGallery_'+index} className={index==0 ? "active" : ""}></li>
+                                return <li data-target="#carousel-2" key={'BlogPostLayoutGalleryLi_'+index} data-slide-to={'BlogPostLayoutGallery_'+index} className={index==0 ? "active" : ""}></li>
                               })
                             }
                         </ol>
@@ -27,7 +27,7 @@ var BlogPostLayoutGallery = React.createClass({
                             {
                               this.props.carrousell.map(function(image, index) {
                                 image.index = index;
-                                return <BlogPostGalleryImage {...image} />
+                                return <BlogPostGalleryImage key={'BlogPostLayoutGallery_'+index} {...image} />
                               })
                             }
 
