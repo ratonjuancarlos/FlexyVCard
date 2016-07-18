@@ -51,7 +51,7 @@ var Blog = React.createClass({
                             }
                         </div>
 
-                        <div className="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        <div className="modal fade bs-example-modal-sm" tabIndex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                             <div className="modal-dialog modal-sm">
                                 <div className="modal-content">
                                     <div className="modal-header">

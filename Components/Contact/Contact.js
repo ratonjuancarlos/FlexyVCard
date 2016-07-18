@@ -97,16 +97,16 @@ var Contact = React.createClass({
 
                                     <form action="" id="contactform">
                                         <p className="form-group" id="contact-name">
-                                            <label for="name">Your Name</label>
+                                            <label htmlFor="name">Your Name</label>
                                             <input type="text" name="name" className="form-control name-contact" id="inputSuccess" placeholder="Name..." />
                                         </p>
                                         <p className="form-group" id="contact-email"> 
-                                            <label for="email">Your Email</label>
+                                            <label htmlFor="email">Your Email</label>
                                             <input type="text" name="email" className="form-control email-contact" id="inputSuccess" placeholder="Email..." />
                                         </p>
 
                                         <p className="form-group" id="contact-message">
-                                            <label for="message">Your Message</label>
+                                            <label htmlFor="message">Your Message</label>
                                             <textarea name="message" cols="88" rows="6" className="form-control message-contact" id="inputError" placeholder="Message..."></textarea>
                                         </p>
                                         <input type="reset" name="reset" value="CLEAR" className="reset" />
