@@ -12,16 +12,16 @@ var BlogCommentForm = React.createClass({
 
             <form method="post" id="comment_form">
                 <p className="form-group" id="contact-name">
-                    <label for="name">Your Name</label>
+                    <label htmlFor="name">Your Name</label>
                     <input type="text" name="name" className="form-control" id="inputSuccess" placeholder="Name*..." />
                 </p>
                 <p className="form-group" id="contact-email"> 
-                    <label for="email">Your Email</label>
+                    <label htmlFor="email">Your Email</label>
                     <input type="text" name="email" className="form-control" id="inputSuccess" placeholder="Email*..." />
                 </p>
 
                 <p className="form-group" id="contact-message">
-                    <label for="message">Your Message</label>
+                    <label htmlFor="message">Your Message</label>
                     <textarea name="message" cols="88" rows="6" className="form-control" id="inputError" placeholder="Your Comment..."></textarea>
                 </p>
                 <input type="reset" name="reset" value="CLEAR" className="reset" />

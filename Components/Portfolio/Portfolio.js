@@ -44,7 +44,7 @@ var Portfolio = React.createClass({
             <div id="portfoliolist">
               {
                 this.state.portfolioData.projects.map(function(project, index) {
-                  return <PortfolioItem key={index} {...project}/>
+                  return <PortfolioItem key={'portfolioItemLi_'+index} {...project}/>
                 })
               }
               <div className="clear"></div>
