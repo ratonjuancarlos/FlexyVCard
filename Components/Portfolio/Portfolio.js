@@ -37,7 +37,7 @@ var Portfolio = React.createClass({
               <li><span className="filter active" data-filter={getAllCat(this.state.portfolioData.categories)}>All</span></li>
               {
                 this.state.portfolioData.categories.map(function(cat, index) {
-                  return <li><span key={'portfolioLi_'+index} className="filter" data-filter={cat.cat}>{cat.name}</span></li>
+                  return <li key={'portfolioLi_'+index}><span  className="filter" data-filter={cat.cat}>{cat.name}</span></li>
                 })
               }
             </ul>
