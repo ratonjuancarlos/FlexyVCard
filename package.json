@@ -4,8 +4,10 @@
   "description": "FlexyVcard made with React",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "webpack-dev-server",
-    "build": "webpack -p Mai.js bundle.js ",
+    "dev": "webpack-dev-server",
+    "build": "webpack -p Main.js bundle.js ",
+    "postinstall":"webpack -p",
+    "start":"node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
 
   },
